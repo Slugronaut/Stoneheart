@@ -6,6 +6,8 @@ This was a small project I used to get myself familiar with the basics of Javasc
 * How hard it is to implement basic functionality in javascript that other languages support by default
 * How bad the vast majority of javascript documentation is because it is aimed at non-programmers that spend more time consuimg non-dairy products that actually writing functionally useful code
 * How the few useful features of javascript are generally frowned upong because it requires you to understand a thing or two about a thing or two
+* How much it sucks that javascript still support broken features in the name of backwards compatability yet manages to release updates all the time that break more recent elements of the language
+* Not having to imagine what it's like in 2020 without the ability to multi-thread
 
 # Features
 * Poorly optimized non-archetypal ECS-based solution

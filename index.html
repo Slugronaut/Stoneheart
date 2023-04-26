@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Stoneheart</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css"/>
+	<link rel="stylesheet" type="text/css" href="style/editor.css"/>
+	<link rel="stylesheet" type="text/css" href="style/inspector.css"/>
+	<link rel="stylesheet" type="text/css" href="style/hierarchy.css"/>
+</head>
+<body id="body">
+<div id="RootContainer">
+	<div id="CanvasArea">
+		<canvas id="View" width="640" height="480">
+			<script type="module">
+			import {AppStart} from "/gamebootstrap.js";
+			document.oncontextmenu = (evt) => {evt.preventDefault();}; //remove default context menu
+			AppStart(document.getElementById("View"));
+			</script>
+		</canvas>
+		
+	</div>
+	<div class="clearfix"> </div>
+	<!-- This is where level-editor tools will be displayed -->
+</div>
+<!-- 
+This can be used for realtime debug display text. Useful for data that
+changes frequently when we don't want to spam the console.
+-->
+<p id="DebugText" id="debugText"></p>
+<div id="ContextMenus"></div>
+
+</body>
+</html>

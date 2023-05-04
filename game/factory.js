@@ -14,9 +14,14 @@ import CharacterController from './../systems/charactercontroller.js';
 import SmoothFollower from './../systems/smoothfollower.js';
 import ParticleEmitter from './../systems/particleemitter.js';
 import SelectionBox from './../systems/selectionbox.js';
-import FollowOnEvent from './../systems/FollowOnEvent.js';
-import FollowEndOnEvent from './../systems/FollowEndOnEvent.js';
+import FollowOnEvent from './../systems/followonevent.js';
+import FollowEndOnEvent from './../systems/followendonevent.js';
+import PlayerSpawnPoster from './../systems/playerspawnposter.js';
 
+import Damage from './../game/systems/damage.js';
+import Health from './../game/systems/health.js';
+import HitStun from './../game/systems/hitstun.js';
+import PlayerDeath from './../game/systems/playerdeath.js';
 
 import Vector2 from './../core/vector2.js';
 import Rect from './../core/rect.js';

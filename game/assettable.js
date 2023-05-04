@@ -105,6 +105,7 @@ export default class Assets
   /// 
   static async CompileAssetList(root)
   {
+    console.log("Compiling asset list...");
     await ListAllFilesAsync(root, true).then((result) =>
     {
       for(let r of result)
@@ -116,6 +117,8 @@ export default class Assets
           this.#Sprites['SPRITE_'+Object.keys(this.#Sprites).length] = r;
         else if(r.includes('.wav'))
           this.#Sounds['SFX_'+Object.keys(this.#Sounds).length] = r;
+          
+        console.log(r);
       }
     });
   }

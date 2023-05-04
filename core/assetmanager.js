@@ -226,6 +226,7 @@ export default class AssetManager
 	{
 		var request = new XMLHttpRequest();
 		request.open("GET", path, true);
+		request.overrideMimeType("application/json");
 		request.error = () =>
 		{
 			this.#Anims.delete(path);

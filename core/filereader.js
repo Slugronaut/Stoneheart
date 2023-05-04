@@ -8,6 +8,7 @@ export function LoadFileSync(filePath)
 {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET", filePath, false);
+	xmlhttp.overrideMimeType("application/json");
 	xmlhttp.send();
 	if (xmlhttp.status!=200) 
 		throw new Error(xmlhttp.responseText);

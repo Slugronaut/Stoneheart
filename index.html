@@ -6,14 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="style/style.css"/>
 	<link rel="stylesheet" type="text/css" href="style/editor.css"/>
 	<link rel="stylesheet" type="text/css" href="style/inspector.css"/>
-	<link rel="stylesheet" type="text/css" href="style/hierarchy.css"/>
+	<link rel="stylesheet" type="text/css" href="style/hierarchy.css"/>  
+  <!--<base href="http://postexistence.com/stoneheart/" /> -->
 </head>
 <body id="body">
 <div id="RootContainer">
 	<div id="CanvasArea">
 		<canvas id="View" width="640" height="480">
 			<script type="module">
-			import {AppStart} from "/gamebootstrap.js";
+			import {AppStart} from "./gamebootstrap.js";
 			document.oncontextmenu = (evt) => {evt.preventDefault();}; //remove default context menu
 			AppStart(document.getElementById("View"));
 			</script>
@@ -23,6 +24,7 @@
 	<div class="clearfix"> </div>
 	<!-- This is where level-editor tools will be displayed -->
 </div>
+<p style="text-align:center; color:#ffffff">Press 'P' and 'O' keys simultaneously to enter edit mode.</p>
 <!-- 
 This can be used for realtime debug display text. Useful for data that
 changes frequently when we don't want to spam the console.

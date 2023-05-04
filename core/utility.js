@@ -242,6 +242,7 @@ export function ImportFromDirectory(url)
 /// 
 export async function ListAllFilesAsync(url, recursive = false)
 {
+  console.log("Listing directories files of " + url + "\n\nIf this fails it is because the server is not configured to allow directory listing.");
   return new Promise((resolve, fail) =>
   {
     let request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
@@ -293,6 +294,22 @@ export async function ListAllFilesAsync(url, recursive = false)
     request.send();
   });
 }
+
+/*
+var directory = <path>;
+var xmlHttp = new XMLHttpRequest();
+xmlHttp.open('GET', directory, false); // false for synchronous request
+xmlHttp.send(null);
+var ret = xmlHttp.responseText;
+var fileList = ret.split('\n');
+for (i = 0; i < fileList.length; i++) {
+    var fileinfo = fileList[i].split(' ');
+    if (fileinfo[0] == '201:') {
+        document.write(fileinfo[1] + "<br>");
+        document.write('<img src=\"' + directory + fileinfo[1] + '\"/>');
+    }
+}
+*/
 
 /// 
 /// Executes a give method for a set rate per second. Returns an internal accumulator
